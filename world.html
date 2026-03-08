@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>WebGL World</title>
+</head>
+<body onload="main()">
+  <div style="position:relative; width:400px; height:400px;">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+   
+    <div style="position:absolute;top:50%;left:50%;width:8px;height:8px;
+                background:white;border-radius:50%;transform:translate(-50%,-50%);
+                pointer-events:none;border:1px solid black;opacity:0.8;"></div>
+  </div>
+
+  <p id="numdot"></p>
+
+  <p>
+    <button id="pointButton">Press E to add block</button>
+    <button id="triButton">Press Q to delete block</button>
+  </p>
+
+  <hr/>
+  <b>Lighting</b><br>
+  <button id="lightOnButton">Lighting ON</button>
+  <button id="lightOffButton">Lighting OFF</button>
+  &nbsp;&nbsp;
+  <button id="normalOnButton">Normals ON</button>
+  <button id="normalOffButton">Normals OFF</button>
+  &nbsp;&nbsp;
+  <button id="spotOnButton">Spotlight ON</button>
+  <button id="spotOffButton">Spotlight OFF</button>
+
+  <p>Light Position <input type="range" min="0" max="360" value="0" id="lightSlide"></p>
+  <p>Light R <input type="range" min="0" max="100" value="100" id="lightRedSlide"></p>
+  <p>Light G <input type="range" min="0" max="100" value="100" id="lightGreenSlide"></p>
+  <p>Light B <input type="range" min="0" max="100" value="100" id="lightBlueSlide"></p>
+
+  <hr/>
+  <b>Camera</b>
+  <p>Camera Angle <input type="range" min="0" max="90" value="5" id="angleSlide"></p>
+
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="lib/cuon-matrix.js"></script>
+  <script src="Triangle.js"></script>
+  <script src="Cube.js"></script>
+  <script src="Sphere.js"></script>
+  <script src="Dragon.js"></script>
+  <script src="Camera.js"></script>
+  <script src="world.js"></script>
+</body>
+</html>
